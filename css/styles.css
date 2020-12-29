@@ -7,4 +7,64 @@
 .t1{
     color: white;
     display:inline-block;
+    margin
 }
+
+.ref{
+    text-decoration: none;
+    color: white;
+}
+
+.ref:hover{
+    color: black;
+}
+
+.tencabezado{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.escudo1{
+    width: 25vh;
+    margin-left: 20%;
+}
+
+.escudo2{
+    width: 25vh;
+    margin-left: 40%;
+}
+.texto{
+    padding-top: 20px;
+}
+
+.alineacion{
+    padding-top: 1.5%;
+}
+
+#entradaformula{
+    width: 27%;
+}
+
+.entrada{
+    padding: 10% 0% 2% 7%;
+}
+
+.b{
+    position: relative;
+    width: 20%;
+    left: 15.5%;
+    top: 7px;
+}
+
+.table{
+    width: 18px;
+    margin: 10% 0% 2% 7%;
+}
+
+.pie{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
