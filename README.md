@@ -1,0 +1,1 @@
+Proyecto de Estructuras Discretas, equipo 1.
