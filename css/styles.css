@@ -1,0 +1,10 @@
+.barra{
+    background-color: gray;
+    text-align: right;
+    padding: 30px 0px 30px 0px;
+}
+
+.t1{
+    color: white;
+    display:inline-block;
+}
