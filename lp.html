@@ -1,175 +1,478 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lógica proposicional</title>
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="shortcut icon" href="img/t.jpg">
-</head>
-<body>
-    <nav class="barra row">
-        <ul>
-            <li class="t1">
-                <a href="index.html" class="ref">Inicio</a> &emsp; <a href="#" class="ref">Manual de usuario</a> 
-            </li>
-        </ul>
-    </nav>
+    <html lang="es">
 
-    <div class="row alineacion">
-        <div class="col-sm">
-            <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
-        </div>
-        <div class="col-sm texto">
-            <p class="tencabezado">
-                Universidad Nacional Autónoma de México
-            </p>
-            <p class="tencabezado">
-                Facultad de Ingeniería               
-            </p>
-            <p class="tencabezado">
-                Estructuras Discretas
-            </p>
-        </div>
-        <div class="col-sm">
-            <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lógica proposicional</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="shortcut icon" href="img/t.jpg">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    </head>
 
-    <div class="teoria">
-        <h1>Lógica proposicional</h1>
-        <h2>Conceptos básicos</h2>
-        <p>
-            Logica proposicional y calculo de predicados
-            
-            Axioma: Razonamientos que se dan como validos <br> y no necesitan una demostración. <br>
-
-            Proposicion: Una oracion decorativa que es correcta o falsa, pero no ambas a la vez.
-            <br>
-            <br>Por ejemplo
+    <body>
+        <nav class="barra row">
             <ul>
-              <li>Brucelas es la capital de Belgica (Es verdadero)</li>
-              <li>Toronto es es la capital de Canada (Es falso)</li>
-              <li>2 + 2 = 7 (Es falso)</li>
+                <li class="t1">
+                    <a href="index.html" class="ref">Inicio</a> &emsp; <a href="#" class="ref">Manual de usuario</a>
+                </li>
             </ul>
+        </nav>
 
-            Normalmente las proposiciones se representan con letras (p,q,r,s,t)
+        <div class="row alineacion">
+            <div class="col-sm">
+                <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
+            </div>
+            <div class="col-sm texto">
+                <p class="tencabezado">
+                    Universidad Nacional Autónoma de México
+                </p>
+                <p class="tencabezado">
+                    Facultad de Ingeniería
+                </p>
+                <p class="tencabezado">
+                    Estructuras Discretas
+                </p>
+            </div>
+            <div class="col-sm">
+                <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
+            </div>
+        </div>
+
+        <div class="teoria">
+            <h1>Lógica proposicional</h1>
+            <h2>Conceptos básicos</h2>
+            <p>
+                Logica proposicional y calculo de predicados
+
+                Axioma: Razonamientos que se dan como validos <br> y no necesitan una demostración. <br>
+
+                Proposicion: Una oracion decorativa que es correcta o falsa, pero no ambas a la vez.
+                <br>
+                <br>Por ejemplo
+                <ul>
+                    <li>Brucelas es la capital de Belgica (Es verdadero)</li>
+                    <li>Toronto es es la capital de Canada (Es falso)</li>
+                    <li>2 + 2 = 7 (Es falso)</li>
+                </ul>
+
+                Normalmente las proposiciones se representan con letras (p,q,r,s,t)
 
 
-        </p>
-        <h2>Conectores lógicos</h2>
-        <h3>Negación</h3>
-        <p>
-          Sea p una proposición. El enunciado:
-          <br>
-          <em>"No se cumple p"</em>
-          <br>
-          hablamos de una negación ddenotdrapor
-          <br>
-          ¬p ó p'        
-        </p>
-        <p> 
-          Por ejemplo:
-          <br>
-          p: "Hoy es jueves"
-          ¬p: "No es cierto que hoy es jueves"
-        </p>
-        <h3>Tabla de verdad</h3>
-        <p>
-          Tabla que muestra la relación entre los valores de verdad de las proposiciones
-          <div class="tabla">
-            <table>
-              <tr>
-                <td>p</td>
-                <td>¬p</td>
-              </tr>
-              <tr>
-                <td>F</td>
-                <td>V</td>
-              </tr>
-              <tr>
-                <td>V</td>
-                <td>F</td>
-              </tr>
-            </table>
-          </div>
-        </p>
-        <h3>Conjuncion</h3>
-        <p>
-            Sea p y q proposiciones <br>
-            La proposicion <em>"p y q"</em> se denota por: <br>
-            p ^ q
-        </p>
-        <p>
-            Por ejemplo: <br>
-            p: "Hoy es jueves" <br>
-            q: "Hoy llueve" <br>
-        </p>
-        <h3>Disyunción</h3>        
-        <p>
-            Sea p y q proposiciones <br>
-            La proposición <em>"p y q" </em> se denota por: <br>
-            p v q
-        </p>
-        <p>
-            Por ejemplo: <br>
-            La silla es de caoba <br>
-            o la silla es tabular. <br>
-            p: "La mesa es de caoba"
-            q: "La silla es tabular"
-            
+            </p>
+            <h2>Conectores lógicos</h2>
+            <h3>Negación</h3>
+            <p>
+                Sea p una proposición. El enunciado:
+                <br>
+                <em>"No se cumple p"</em>
+                <br>
+                hablamos de una negación ddenotdrapor
+                <br>
+                ¬p ó p'
+            </p>
+            <p>
+                Por ejemplo:
+                <br>
+                p: "Hoy es jueves"
+                <br>
+                ¬p: "No es cierto que hoy es jueves"
+            </p>
+            <h3>Tabla de verdad</h3>
+            <p>
+                Tabla que muestra la relación entre los valores de verdad de las proposiciones
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <td>p</td>
+                            <td>¬p</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </div>
+            </p>
+            <h3>Conjuncion</h3>
+            <p>
+                Sea p y q proposiciones <br>
+                La proposicion <em>"p y q"</em> se denota por: <br>
+                p ^ q
+            </p>
+            <p>
+                Por ejemplo: <br>
+                p: "Hoy es jueves" <br>
+                q: "Hoy llueve" <br>
+                p ^ q: "Hoy es jueves y hoy llueve" <br>
+                p ^ ¬q: "Hoy es jueves y hoy no llueve"
+            </p>
+            <h3>Tabla de verdad</h3>
+            <p>
+                Tabla que muestra la relación entre los valores de verdad de las proposiciones
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <td>p</td>
+                            <td>q</td>
+                            <td>p ^ q</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>V</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </div>
+            </p>
+            <h3>Disyunción</h3>
+            <p>
+                Sea p y q proposiciones <br>
+                La proposición <em>"p y q" </em> se denota por: <br>
+                p v q
+            </p>
+            <p>
+                Por ejemplo: <br>
+                La silla es de caoba <br>
+                o la silla es tabular. <br>
+                p: "La mesa es de caoba" <br>
+                q: "La silla es tabular"<br>
+
+                Representación en notación de proposición: <br>
+                p v q
+
+            </p>
+
+            <h3>Tabla de verdad</h3>
+            <p>
+                Tabla que muestra la relación entre los valores de verdad de las proposiciones
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <td>p</td>
+                            <td>q</td>
+                            <td>p v q</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>F</td>
+                            <td>V</td>
+
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>V</td>
+                            <td>V</td>
+
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </div>
+            </p>
+
+
+
+            <h3>Implicación</h3>
+
+            <p>
+                sea p y q proposiciones, la implicacion se denota
+            </p>
+            <p>
+                p → q
+            </p>
+            <p>
+                Tabla de verdad
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <td>p</td>
+                            <td>¬p</td>
+                            <td>p → q</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>V</td>
+                        </tr>
+                    </table>
+                </div>
+            </p>
+            <h3>Bicondicional</h3>
+            <p>
+                Sea p y q proposiciones, hablamos de una bicondicional cuando <em> "p y q" </em> se denota por:
+            </p>
+            <p>
+                p ↔ q
+            </p>
+            <p>
+                Por ejemplo: <br>
+                p: "La Tierra es esférica" <br>
+                q: "El Sol es una estrella" <br>
+                p ↔ q: "La Tierra es esférica si y sólo si el Sol es una estrella" <br>
+
+            </p>
+            <p>
+                <h3>Tabla de verdad</h3>
+                <div class="tabla">
+					<table>
+						<tr>
+							<td> p </td>
+							<td> q </td>
+							<td> p ↔ q </td>
+						</tr>
+						<tr>
+							<td> V </td>
+							<td> V </td>
+							<td> V </td>
+						</tr>
+						<tr>
+							<td> V </td>
+							<td> F </td>
+							<td> F </td>
+						</tr>
+						<tr>
+							<td> F </td>
+							<td> V </td>
+							<td> F </td>
+						</tr>
+                        <tr>
+							<td> F </td>
+							<td> F </td>
+							<td> V </td>
+						</tr>
+					</table>
+                </div>
+            </p>
+
+            <h3>Proposiciones atómicas</h3>
+            <p>
+                Proposiciones que no contienen conectores logicos
+            </p>
+            <p>
+                Ejemplo
+                <br>
+                p,q,r
+            </p>
+            <h3>Proposiciones moleculares</h3>
+            <p>
+                Propociones que contienen conectores lógicos
+            </p>
+            <p>
+                Ejemplo:
+                <br>
+                p ^ q,p v q
+            </p>
+            <h3>Precedencia de operaciones lógicas</h3>
+            <p>
+                La jerarquia de prioridad al momento de realizar las operaciones logicas es la siguiente
+                <ul>
+                    <li>() -  Parentesis</li>
+                    <li>¬  -  Negación</li>
+                    <li>^  -  Conjunción</li>
+                    <li>v  -  Disjunción</li>
+                    <li>→  -  Implicación</li>
+                    <li>↔  -  Doble implicación</li>
+                </ul>
+            </p>
+
+            <h3>Tautología</h3>
+            <p>
+                Caso en el cual una proposición resulata ser siempre verdadera
+                <br>
+                Ejemplo
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <td>p</td>
+                            <td>q</td>
+                            <td>q → p</td>
+                            <td>(p^ (q → p))</td>
+                            <td>p → (p^ (q → p))</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>→
+                            <td>V</td>
+                            <td>F</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>V</td>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>F</td>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                    </table>
+                </div>
+            </p>
+
+            <h3>Contradicción</h3>
+            <p>
+                Una formula proposicional se denomina contradiccion <br>
+                si la columna resultante de su tabla de verdad contiene valores unicamente falsos.
+            </p>
+            <div class="tabla">
+                <table>
+                    <tr>
+                        <td>p</td>
+                        <td>q</td>
+                        <td>(p ^ q)</td>
+                        <td>(p v q)</td>
+                        <td>¬(p ^ q)</td>
+                        <td>(p ^ q) ^ ¬(p ^ q)</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+            </div>
             <br>
+            <h3>Contingencia</h3>
+            <p>
+                Una formula proposicional se denomina contingencia <br>
+                si la columna resultante de su tabla de verdad contiene <br>
+                unicamente valores verdaderos y falsos.
+            </p>
+            <div class="tabla">
+                <table>
+                    <tr>
+                        <td>p</td>
+                        <td>q</td>
+                        <td>¬q</td>
+                        <td>(p v ¬q)</td>
+                        <td>(p → q)</td>
+                        <td>(p v ¬q) ^ (p → q)</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
-            Representación en notación de proposición: <br>
-            p v q
-            
-        </p>
-        
-        
-        
-        <h3>Implicación</h3>
-        
-        <p>
-          sea p y q proposiciones, la implicacion se denota 
-        </p>
-        <p>
-          p → q 
-        </p>
-        <p>
-          Tabla de verdad
-          <div class="tabla">
-            <table>
-              <tr>
-                <td>p</td>
-                <td>¬p</td>
-              </tr>
-              <tr>
-                <td>F</td>
-                <td>V</td>
-              </tr>
-              <tr>
-                <td>V</td>
-                <td>F</td>
-              </tr>
-            </table>
-          </div>
-        </p>
-		<h3>Bicondicional</h3>
-        <p>
-			Sea p y q proposiciones, hablamos de una
-		</p>
-        ↔
-        
-        
-    </div>
-    
-  
-</body>
-<script src="js/bootstrap.bundle.js"></script>
-</html>
-=======
-hola
-1351616516165103
->>>>>>> 791f492571061937fd1c9c809cd5d46ebcd7eae2
+        </div>
+
+
+
+
+    </body>
+    <script src="js/bootstrap.bundle.js"></script>
+
+    </html>

@@ -1,0 +1,32 @@
+
+/*small devices (phones, 576 and up)*/
+@media (min-width: 576px) {
+    .barra row {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .barra row {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .barra row {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .barra row {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
