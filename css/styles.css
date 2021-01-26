@@ -1,10 +1,8 @@
-
-
 .barra{
-    
     background-color: gray;
-    text-align: right;
-    padding: 20px 0px 20px 0px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .t1{
@@ -12,9 +10,20 @@
     display:inline-block;
 }
 
+.contenido{
+    padding: 5%;
+    text-align: center;
+}
+
+.t2{
+    color: white;
+    display:inline-block;
+}
+
 .ref{
     text-decoration: none;
     color: white;
+    padding: 0%;
 }
 
 .ref:hover{
@@ -25,6 +34,8 @@
     text-align: center;
     font-size: larger;
     font-weight: bold;
+    padding: 0%;
+    margin: 0%;
 }
 
 .escudo1{
@@ -38,14 +49,17 @@
 }
 .texto{
     padding-top: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 
 .alineacion{
     padding-top: 1.5%;
+    align-items: center;
 }
 
 #entradaformula{
-    width: 27%;
+    width: 30%;
 }
 
 .entrada{
@@ -55,8 +69,8 @@
 .b{
     position: relative;
     width: 20%;
-    left: 15.5%;
-    top: 7px;
+    left: 24%;
+    top: 1%;
 }
 
 /*
@@ -69,12 +83,14 @@
     background-color: gray;
     color: white;
     text-align: center;
-    padding-bottom: 0%;
+    width: auto;
+    padding: 15px 0px 15px 0px;
 }
 
 .teoria{
     padding-left: 5%;
     padding-top: 5%;
+    padding-bottom: 10%;
 }
 
 .tabla{

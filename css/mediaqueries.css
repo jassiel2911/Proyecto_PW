@@ -1,32 +1,50 @@
 
 /*small devices (phones, 576 and up)*/
 @media (min-width: 576px) {
-    .barra row {
+    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
         width: 100%;
-        margin: 0 auto;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .barra pie{
+        width: fit-content;
     }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .barra row {
-        width: 100%;
-        margin: 0 auto;
+    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .barra pie{
+        width: fit-content;
     }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    .barra row {
-        width: 100%;
-        margin: 0 auto;
+    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .barra pie{
+        width: fit-content;
     }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-    .barra row {
-        width: 100%;
-        margin: 0 auto;
+    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+        margin: 0%;
+        padding: 0%;
     }
+
+    .barra pie{
+        width: fit-content;
+    }
+
 }
