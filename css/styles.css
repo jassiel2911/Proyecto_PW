@@ -52,7 +52,7 @@
 }
 
 #entradaformula{
-    width: 25%;
+    width: 50%;
 }
 
 .entrada{
@@ -62,8 +62,9 @@
 .b{
     position: relative;
     width: 20%;
-    left: 12%;
+    left: 38%;
     top: 1%;
+    margin-bottom: 3%;
 }
 
 /*
