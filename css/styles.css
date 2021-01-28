@@ -1,8 +1,9 @@
 .barra{
     background-color: gray;
-    text-align: center;
+    text-align: right;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 2%;
 }
 
 .t1{
@@ -39,6 +40,8 @@
 
 .escudo2{
     width: 25vh;
+    position: relative;
+    left: 45%;
 }
 .texto{
     padding-top: 20px;
