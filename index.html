@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <nav class="barra row">
-        <div class="col-md contenedor">
+    <nav class="barra">
+        <div class="contenedor">
             <ul>
                 <li class="t1">
                     <a href="lp.html" class="ref">Lógica proposicional</a> &emsp; <a href="#" class="ref">Manual de
@@ -23,42 +23,79 @@
         </div>
     </nav>
 
-    <div class="row alineacion">
-        <div class="col-sm">   
-            <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
-        </div>
-        <div class="col-sm texto">
-            <p class="tencabezado">
-                Universidad Nacional Autónoma de México
-            </p>
-            <p class="tencabezado">
-                Facultad de Ingeniería
-            </p>
-            <p class="tencabezado">
-                Estructuras Discretas
-            </p>
-        </div>
-        <div class="col-sm">
-            <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
-        </div>
-    </div>
+    <div class="container">
 
-    <!--Este es el culpable de la página -->
-
-    <div class="row entrada">
-        <h5>
+        <div class="row alineacion">
+            <div class="col-sm-4">   
+                <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
+            </div>
+            <div class="col-sm-4 texto">
+                <p class="tencabezado">
+                    Universidad Nacional Autónoma de México
+                </p>
+                <p class="tencabezado">
+                    Facultad de Ingeniería
+                </p>
+                <p class="tencabezado">
+                    Estructuras Discretas
+                </p>
+            </div>
+            <div class="flex flex-derecha col-sm-4">
+                <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
+            </div>
+        </div>
+    
+        <!--Este es el culpable de la página -->
+    
+        <div class="row entrada">
+            <h5>
             Ingrese fórmula proposicional
-        </h5>
-        <input type="text" class="form-control" id="entradaformula" placeholder="Entrada">
-    </div>
+            </h5>
+            <input type="text" class="form-control" id="entradaformula" placeholder="Entrada">
+        </div>
+    
+        <div class="b">
+            <button type="button" class="btn btn-primary">Tabla de verdad</button>
+        </div>
 
-    <div class="b">
-        <button type="button" class="btn btn-primary">Tabla de verdad</button>
-    </div>
-
-    <div class="contenido">
-        <h1>La tabla de la proposición escrita: </h1>
-    </div>
+        <div class="contenido">
+            <div class="row">
+                Resultado
+            </div>
+            <div class="row">
+                <div class="flex flex-centro col-md-6">
+                    <div class="resultado-tabla">
+                        <div class="tabla">
+                            <table>
+                                <tr>
+                                    <td>p</td>
+                                    <td>¬p</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V</td>
+                                </tr>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-derecha col-md-6">
+                    <div class="resultado-descripcion">
+                        <div class="resultado-tipo caja-resultado">
+                            Contingencia
+                        </div>
+                        <div class="resultado-detallado caja-resultado">
+                            La columna resultante tiene valores verdaderos y falsos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>>
 
     <footer class="pie">
         <ul>

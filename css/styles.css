@@ -10,11 +10,6 @@
     display:inline-block;
 }
 
-.contenido{
-    padding: 5%;
-    text-align: center;
-}
-
 .t2{
     color: white;
     display:inline-block;
@@ -40,12 +35,10 @@
 
 .escudo1{
     width: 25vh;
-    margin-left: 20%;
 }
 
 .escudo2{
     width: 25vh;
-    margin-left: 20%;
 }
 .texto{
     padding-top: 20px;
@@ -59,17 +52,17 @@
 }
 
 #entradaformula{
-    width: 30%;
+    width: 25%;
 }
 
 .entrada{
-    padding: 10% 0% 2% 7%;
+    padding: 10% 0% 2% 0%;
 }
 
 .b{
     position: relative;
     width: 20%;
-    left: 24%;
+    left: 12%;
     top: 1%;
 }
 
@@ -102,4 +95,25 @@
     border: 1px solid black;
     padding: 8px;
     text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-centro{
+    justify-content: center;
+}
+
+.flex-derecha{
+    justify-content: end;
+}
+
+.caja-resultado{
+    border: 1px solid black;
+    background: chartreuse;
+}
+
+.resultado-descripcion{
+    width: 45%;
 }
