@@ -55,8 +55,12 @@
     width: 50%;
 }
 
+.btn-operadores{
+    width: 50%; 
+}
+
 .entrada{
-    padding: 10% 0% 2% 0%;
+    padding: 10% 0% 1% 0%;
 }
 
 .b{
