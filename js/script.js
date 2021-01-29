@@ -162,4 +162,4 @@ function hola(){
 
 /*--------------------------- ZONA DE EJECUCION ------------------------------*/
 
-//limpiar_entrada()
+limpiar_entrada()
