@@ -41,8 +41,6 @@
 
 .escudo2{
     width: 25vh;
-    position: relative;
-    left: 45%;
 }
 .texto{
     padding-top: 20px;
@@ -120,9 +118,13 @@
 
 .caja-resultado{
     border: 1px solid black;
-    background: chartreuse;
+    background: white;
 }
 
 .resultado-descripcion{
     width: 45%;
+}
+
+.contenido{
+    margin-bottom: 4%;
 }

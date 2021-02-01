@@ -48,34 +48,100 @@ function aniadir_caracter(opcion){
 
 /*--------------- FUNCIONES PARA ORGANIZAR LAS PROPOSICIONES -----------------*/
 
-/*
-WHILE haya tokens por leer:
-  leer_token()
-  IF token es un numero:
-    agrega a la pila
-  ELSE IF token es un operador:
-    WHILE ( 
-      (haya operadores en la cima de la pila) 
-      AND
-      ( (el operador de la cima de la pila tiene > prescedencia) OR (el operador en la cima de la pila tiene la misma prescedencia) )
-      AND
-      (el operador en la cima de la pila no es un parentesis izquierdo)
-    ):
-      extraer de la pila el operador de la cima de la pila y colocarlo en la salida
-    agregar a la pila
-  ELSE IF es un parentesis izquierdo:
-    agregar a la pila
-  ELSE IF es un parentesis derecho:
-    WHILE el operador en la cima de la pila no sea un parentesis izquierdo;
-      extraer el operador de la cima de la pila y agregarla en la salida
-    //EN CASO DE ESTAR VACIA LA PILA Y NO HABER ENCONTRADO EL PARENTESIS IZQUIERO, SE GENERA ERROR
-    IF en la cima de la pila se encuentra un parentesis izquierdo:
-      extraerlo de la pila
-IF No existen mas tokens por leer:
-  WHILE aun existan tokens en la pila:
-    extrer el operador y añadirlo a la pila
-  //SI SE LLEGA A ENCONTRAR ALGUN PARENTESIS, SE GENERA ERROR
-*/
+function get_valores(atomica,atomicas){
+  var resultado = []
+  for(var i = 0;i<atomicas.length;i++){
+    if(atomicas[i][0] == atomica){
+      for(j = 1;j<atomicas[i].length-1;j++){
+        resultado.push()
+      }
+    }
+  }
+}
+
+function ejecuta_operacion(formula,atomicas){
+  var operadores = ['\u00AC','\u2227','\u2228','\u2192','\u21C4']
+  var pila_variables = []
+  var elemento = ""
+  var p = ""
+  var q = ""
+  var resultado = []
+  while (formula.length > 0){
+    elemento = formula.shift()
+    if(operadores.indexOf(elemento) === -1){
+      pila_variables.push(get_valores(elemento,atomicas))
+    }else{
+      q = pila_variables.pop()
+      if(elemento != operadores[0]){
+        p = pila_variables.pop()
+      }
+      resultado = realiza_op_logica(elemento,p,q,atomicas)
+    }
+  }
+  console.log(pila_variables)
+}
+
+function inicializa_atomicas(atomicas){
+  var limite = Math.pow(2,atomicas.length-1)
+  var intervalo = 0
+  var valor = false
+  var cuenta = 1
+  for(var i = 0;i<atomicas.length;i++){
+    intervalo = limite/Math.pow(2,i)
+    for(j = 1;j<=limite*2;j++){
+      atomicas[i].push(valor)
+      if(cuenta == intervalo){
+        cuenta = 1
+        valor = !valor
+      }
+      else{
+        cuenta++
+      }
+    }
+  }
+}
+
+function ordena_atomicas(atomicas){
+  atomicas.sort(function(a,b){
+    if(a<b){
+      return -1
+    }
+    if(a>b){
+      return 1
+    }
+    return 0
+  })
+}
+
+function aniade_atomica(atomica,atomicas){
+  var estructura_atomica = []
+  estructura_atomica.push(atomica)
+  atomicas.push(estructura_atomica)
+}
+
+function atomica_no_encontrada(atomica,atomicas){
+  if(atomicas.length === 0){
+    return true
+  }
+  for(var i = 0;i<atomicas.length;i++){
+    if(atomicas[i][0] == atomica){
+      return false
+    }
+  }
+
+  return true
+  
+}
+
+function busca_atomicas(atomicas,formula){
+  formula.forEach(element => {
+    if(element >= "a" && element <= "z"){
+      if(atomica_no_encontrada(element,atomicas)){
+        aniade_atomica(element,atomicas)
+      }
+    }
+  })
+}
 
 function pila_no_vacia(pila){
   return pila.length>0?true:false
@@ -151,15 +217,41 @@ function divide_cadena(cadena){
 
 function hola(){
   var formula = document.getElementById("entradaformula").value
+  var atomicas = []
   formula = divide_cadena(formula)
   if(revisa_parentesis(formula)){
     formula = shunting_yard(formula)
-    console.log(formula)
+    busca_atomicas(atomicas,formula)
+    ordena_atomicas(atomicas)
+    inicializa_atomicas(atomicas)
+    ejecuta_operacion(formula,atomicas)
   }else{
     console.log("parentesis no correctos")
   }
 }
 
+/*---------------- FUNCIONES PARA LAS OPERACIONES LOGICAS --------------------*/
+
+function conjuncion(p,q){
+  return p === true && q === true?true:false
+}
+
+function disyuncion(){
+  return p === false && q === false?false:true
+}
+
+function negacion(p){
+  return p === true?false:true
+}
+
+function implicacion(p,q){
+  return p === true && q === false?false:true
+}
+
+function doble_implicacion(p,q){
+  return p === q?true:false
+}
+
 /*--------------------------- ZONA DE EJECUCION ------------------------------*/
 
-limpiar_entrada()
+//limpiar_entrada()
