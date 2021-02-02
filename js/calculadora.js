@@ -120,7 +120,7 @@ function crearTabla(){
         if(ventana!==null) ventana.close();
         ventana = window.open('','ventana','width=800,height=550,top='+ ((screen.height - 550) / 2) + ',left=' + ((screen.width - 4000) / 2));
         ventana.document.write('<head><title>Tabla proposicional</title>');
-        ventana.document.write('<link rel="stylesheet" type="text/css" href="boostrap/css/bootstrap.min.css">');
+        ventana.document.write('<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">');
         ventana.document.write('</head>');        
         ventana.document.write('<body>');
         ventana.document.write('<table class="table table-hover">');
