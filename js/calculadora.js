@@ -44,7 +44,7 @@ function elkinGay()
     {
         variables[7]="t";
     }
-    if(document.getElementById("valueOfS").selectedIndex==1)
+    if(document.getElementById("valueOfA").selectedIndex==1)
     {
         variables[9]="f"
     }
@@ -52,7 +52,7 @@ function elkinGay()
     {
         variables[9]="t";
     }
-    if(document.getElementById("valueOfS").selectedIndex==1)
+    if(document.getElementById("valueOfB").selectedIndex==1)
     {
         variables[11]="f"
     }
@@ -617,7 +617,7 @@ function Expresion(expr){
     };
     
     this.isLetter = function(texto){
-       var letras="abcdefghyjklmnñopqrstuvwxyz";
+       var letras="abcdefghijklmnñopqrstuvwxyz";
        for(var i=0; i<texto.length; i++){
           if (letras.indexOf(texto.charAt(i),0)!==-1){
              return true;

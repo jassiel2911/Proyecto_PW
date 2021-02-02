@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+    <html lang="es">
 
     <head>
 
@@ -11,181 +11,182 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href="img/t.png">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-</head>
+    </head>
 
-<body>  
+    <body>  
 
-    <nav class="barra">
-        <div class="contenedor">
+        <nav class="barra">
+            <div class="contenedor">
+                <ul>
+                    <li class="t1">
+                        <a href="lp.html" class="ref">Lógica proposicional</a> &emsp; <a href="Instructivo.pdf" target="_blank" class="ref">Manual de
+                            usuario</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container">
+
+            <div class="row alineacion">
+                <div class="col-sm-4">   
+                    <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
+                </div>
+                <div class="col-sm-4 texto">
+                    <p class="tencabezado">
+                        Universidad Nacional Autónoma de México
+                    </p>
+                    <p class="tencabezado">
+                        Facultad de Ingeniería
+                    </p>
+                    <p class="tencabezado">
+                        Estructuras Discretas
+                    </p>
+                </div>
+                <div class="flex-derecha col-sm-4">
+                    <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
+                </div>
+            </div>
+                
+            <form name="fo">                 
+        
+                <div class="cuadro">
+                    <font size="4"><strong>Ingrese fórmula proposicional</strong></font>
+                <br><br>
+                <colspan="4"><input type="text" name="valores" style='width:300px; height:30px' id="valores" readonly="readonly">
+        
+                <tr>
+                    
+                
+                    <div>
+        
+                        Proposiciones atómicas
+                        <br>
+                        <td><input type="button" value="p" style='width:70px; height:50px' onclick="retornar(value,'p')"></td>
+                        <td><input type="button" value="q" style='width:70px; height:50px' onclick="retornar(value,'q')"></td>
+                        <td><input type="button" value="r" style='width:70px; height:50px' onclick="retornar(value,'r')"></td>
+                        <td><input type="button" value="s"  style='width:70px; height:50px'onclick="retornar(value,'s')"></td>
+                        <td><input type="button" value="a"  style='width:70px; height:50px'onclick="retornar(value,'a')"></td>
+                        <td><input type="button" value="b"  style='width:70px; height:50px'onclick="retornar(value,'b')"></td>
+                        
+                    </div>
+
+                    <br>
+
+                    <div>
+        
+                        Operadores Lógicos
+                        <br>
+                        <td><input type="button" value="ʌ" style='width:70px; height:50px' onclick="retornar(value,'&amp;')"></td>
+                        <td><input type="button" value="∨" style='width:70px; height:50px' onclick="retornar(value,'|')"></td>
+                        <td><input type="button" value="→" style='width:70px; height:50px' onclick="retornar(value,'>')"></td>
+                        <td><input type="button" value="¬" style='width:70px; height:50px' onclick="retornar(value,'!')"></td>
+                        
+                    </div>
+                    
+                    <br>
+
+                    <div>
+                        <td><input type="button" value="↔" style='width:70px; height:50px' onclick="retornar(value,'<')"></td>
+                        <td width="100px"><input type="button" style='width:70px; height:50px' value="(" onclick="retornar(value,'(')"></td>
+                        <td><input type="button" value=")" style='width:70px; height:50px' onclick="retornar(value,')')"></td>
+                    </div>
+
+                    <br>
+
+                    <td><input type="button" value="DEL" style='width:80px; height:40px' onclick="eliminar()"></td>
+                    <td><input type="button" value="Borrar" style='width:80px; height:40px' onclick="limpiarTextField()"></td>       
+                </tr>
+                </div>
+                
+                <tr>
+                    <td colspan="5"><hr size="4px" color="white"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5">       
+                        <legend><strong>Valores de Verdad</strong></legend>                      
+                        <label for="valorVerdadP">P</label>                        
+                        <SELECT NAME="value" id="valueOfP" SIZE=1"  color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+                        
+                                    
+                        <label for="valorVerdadQ">Q</label>
+                        <SELECT NAME="value" id="valueOfQ" SIZE=1" color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+                                    
+                                    
+                        <label for="valorVerdadR">R</label>
+                        <SELECT NAME="value" id="valueOfR" SIZE=1" color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+                                    
+                                    
+                        <label for="valorVerdadS">S</label>
+                        <SELECT NAME="value" id="valueOfS" SIZE=1" color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+                        
+                        <label for="valorVerdadS">A</label>
+                        <SELECT NAME="value" id="valueOfA" SIZE=1" color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+
+                        <label for="valorVerdadS">B</label>
+                        <SELECT NAME="value" id="valueOfB" SIZE=1" color: white;"> 
+                            <OPTION VALUE="1">Verdadero</OPTION>
+                            <OPTION VALUE="2">Falso</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>        
+                <tr>
+                    <td colspan="5"><hr size="4px" color="white"></td>
+                </tr>   
+                <tr>
+                    <th><span><font size="4" color="black">Equivalencia</font></span></th>
+                    <br><br>
+                    <td colspan="4"><input type="text" readonly="readonly" name="resultado" style='width:300px; height:30px' id="resultado"></td>               
+                </tr>                           
+                <tr>
+                    <td colspan="5"><hr size="4px" color="white"></td>
+                </tr> 
+                        
+                <td colspan="3">
+                    
+                </td>          
+                <input type="button" value="Generar Tabla" id="Tabla" onclick="(new Calcular()).calcular();  crearTabla()">
+                <tr>
+                    <td colspan="5"><hr size="4px" color="white"></td><br><br><br>
+                </tr>    
+        
+            </form>
+
+        </div>
+        
+        
+        <footer class="pie">
             <ul>
                 <li class="t1">
-                    <a href="lp.html" class="ref">Lógica proposicional</a> &emsp; <a href="#" class="ref">Manual de
-                        usuario</a>
+                    Estructuras Discretas &emsp; Equipo: Los Brawlhallers &emsp;
+                    <br>
+                    Ávalos Medina Martin Alejandro &emsp; Bautista Pérez Brian Jassiel &emsp; Gómez Serna Carlos David
+                    <br>
+                    Montiel Martínez Luis Javier &emsp; Romero Rivera Geovanni &emsp; Vargas Jordán Antonio
+                    <br>
                 </li>
             </ul>
-        </div>
-    </nav>
+        </footer>
 
-
-    <div class="container">
-
-        <div class="row alineacion">
-            <div class="col-sm-4">   
-                <img class="escudo1" src="img/escudounam_negro.jpg" alt="escudounam">
-            </div>
-            <div class="col-sm-4 texto">
-                <p class="tencabezado">
-                    Universidad Nacional Autónoma de México
-                </p>
-                <p class="tencabezado">
-                    Facultad de Ingeniería
-                </p>
-                <p class="tencabezado">
-                    Estructuras Discretas
-                </p>
-            </div>
-            <div class="flex-derecha col-sm-4">
-                <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
-            </div>
-        </div>
-            
-        <form name="fo">                 
+    </body>
+    <script type="text/javascript" src="js/calculadora.js"></script><style type="text/css"></style>
+    <script src="js/bootstrap.bundle.js"></script>
     
-            <div class="cuadro">
-                <font size="4"><strong>Ingrese fórmula proposicional</strong></font>
-            <br><br>
-            <colspan="4"><input type="text" name="valores" style='width:300px; height:30px' id="valores" readonly="readonly">
-    
-            <tr>
-                
-             
-                <div>
-    
-                    Proposiciones atómicas
-                    <br>
-                    <td><input type="button" value="p" style='width:70px; height:50px' onclick="retornar(value,'p')"></td>
-                    <td><input type="button" value="q" style='width:70px; height:50px' onclick="retornar(value,'q')"></td>
-                    <td><input type="button" value="r" style='width:70px; height:50px' onclick="retornar(value,'r')"></td>
-                    <td><input type="button" value="s"  style='width:70px; height:50px'onclick="retornar(value,'s')"></td>
-                    <td><input type="button" value="a"  style='width:70px; height:50px'onclick="retornar(value,'a')"></td>
-                    <td><input type="button" value="b"  style='width:70px; height:50px'onclick="retornar(value,'b')"></td>
-                    
-                </div>
-
-                <br>
-
-                <div>
-    
-                    Operadores Lógicos
-                    <br>
-                    <td><input type="button" value="ʌ" style='width:70px; height:50px' onclick="retornar(value,'&amp;')"></td>
-                    <td><input type="button" value="∨" style='width:70px; height:50px' onclick="retornar(value,'|')"></td>
-                    <td><input type="button" value="→" style='width:70px; height:50px' onclick="retornar(value,'>')"></td>
-                    <td><input type="button" value="¬" style='width:70px; height:50px' onclick="retornar(value,'!')"></td>
-                    
-                </div>
-                
-                <br>
-
-                <div>
-                    <td><input type="button" value="↔" style='width:70px; height:50px' onclick="retornar(value,'<')"></td>
-                    <td width="100px"><input type="button" style='width:70px; height:50px' value="(" onclick="retornar(value,'(')"></td>
-                    <td><input type="button" value=")" style='width:70px; height:50px' onclick="retornar(value,')')"></td>
-                </div>
-
-                <br>
-
-                <td><input type="button" value="DEL" style='width:80px; height:40px' onclick="eliminar()"></td>
-                <td><input type="button" value="Borrar" style='width:80px; height:40px' onclick="limpiarTextField()"></td>       
-            </tr>
-            </div>
-            
-            <tr>
-                <td colspan="5"><hr size="4px" color="white"></td>
-            </tr>
-            
-            <tr>
-                <td colspan="5">       
-                    <legend><strong>Valores de Verdad</strong></legend>                      
-                    <label for="valorVerdadP">P</label>                        
-                    <SELECT NAME="value" id="valueOfP" SIZE=1"  color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-                    
-                                
-                    <label for="valorVerdadQ">Q</label>
-                    <SELECT NAME="value" id="valueOfQ" SIZE=1" color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-                                
-                                
-                    <label for="valorVerdadR">R</label>
-                    <SELECT NAME="value" id="valueOfR" SIZE=1" color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-                                
-                                
-                    <label for="valorVerdadS">S</label>
-                    <SELECT NAME="value" id="valueOfS" SIZE=1" color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-                    
-                    <label for="valorVerdadS">A</label>
-                    <SELECT NAME="value" id="valueOfA" SIZE=1" color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-
-                    <label for="valorVerdadS">B</label>
-                    <SELECT NAME="value" id="valueOfB" SIZE=1" color: white;"> 
-                        <OPTION VALUE="1">Verdadero</OPTION>
-                        <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>
-                </td>
-            </tr>        
-            <tr>
-                <td colspan="5"><hr size="4px" color="white"></td>
-            </tr>   
-            <tr>
-                <th><span><font size="4" color="black">Equivalencia</font></span></th>
-                <br><br>
-                <td colspan="4"><input type="text" readonly="readonly" name="resultado" style='width:300px; height:30px' id="resultado"></td>               
-            </tr>                           
-            <tr>
-                <td colspan="5"><hr size="4px" color="white"></td>
-            </tr> 
-                    
-            <td colspan="3">
-                
-            </td>          
-            <input type="button" value="Generar Tabla" id="Tabla" onclick="(new Calcular()).calcular();  crearTabla()">
-            <tr>
-                <td colspan="5"><hr size="4px" color="white"></td><br><br><br>
-            </tr>    
-    
-        </form>
-
-    </div>
-    
-    
-    <footer class="pie">
-        <ul>
-            <li class="t1">
-                Estructuras Discretas &emsp; Equipo: Los Brawlhallers &emsp;
-                <br>
-                Ávalos Medina Martin Alejandro &emsp; Bautista Pérez Brian Jassiel &emsp; Gómez Serna Carlos David
-                <br>
-                Montiel Martínez Luis Javier &emsp; Romero Rivera Geovanni &emsp; Vargas Jordán Antonio
-                <br>
-            </li>
-        </ul>
-    </footer>
-
-</body>
-<script type="text/javascript" src="js/calculadora.js"></script><style type="text/css"></style>
-<script src="js/bootstrap.bundle.js"></script>
 </html>
