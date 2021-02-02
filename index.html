@@ -67,9 +67,13 @@
                     <td><input type="button" value="q" style='width:70px; height:50px' onclick="retornar(value,'q')"></td>
                     <td><input type="button" value="r" style='width:70px; height:50px' onclick="retornar(value,'r')"></td>
                     <td><input type="button" value="s"  style='width:70px; height:50px'onclick="retornar(value,'s')"></td>
+                    <td><input type="button" value="a"  style='width:70px; height:50px'onclick="retornar(value,'a')"></td>
+                    <td><input type="button" value="b"  style='width:70px; height:50px'onclick="retornar(value,'b')"></td>
                     
                 </div>
-                
+
+                <br>
+
                 <div>
     
                     Operadores Lógicos
@@ -80,12 +84,17 @@
                     <td><input type="button" value="¬" style='width:70px; height:50px' onclick="retornar(value,'!')"></td>
                     
                 </div>
-                           
+                
+                <br>
+
                 <div>
                     <td><input type="button" value="↔" style='width:70px; height:50px' onclick="retornar(value,'<')"></td>
                     <td width="100px"><input type="button" style='width:70px; height:50px' value="(" onclick="retornar(value,'(')"></td>
                     <td><input type="button" value=")" style='width:70px; height:50px' onclick="retornar(value,')')"></td>
                 </div>
+
+                <br>
+
                 <td><input type="button" value="DEL" style='width:80px; height:40px' onclick="eliminar()"></td>
                 <td><input type="button" value="Borrar" style='width:80px; height:40px' onclick="limpiarTextField()"></td>       
             </tr>
@@ -123,7 +132,19 @@
                     <SELECT NAME="value" id="valueOfS" SIZE=1" color: white;"> 
                         <OPTION VALUE="1">Verdadero</OPTION>
                         <OPTION VALUE="2">Falso</OPTION>
-                    </SELECT>                                  
+                    </SELECT>
+                    
+                    <label for="valorVerdadS">A</label>
+                    <SELECT NAME="value" id="valueOfA" SIZE=1" color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>
+
+                    <label for="valorVerdadS">B</label>
+                    <SELECT NAME="value" id="valueOfB" SIZE=1" color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>
                 </td>
             </tr>        
             <tr>

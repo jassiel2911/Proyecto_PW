@@ -1,6 +1,6 @@
-var variables = ["p","t","q","t","r","t","s","t"];
-var verdades = [false,false,false,false];
-var proposiciones = ["p","q","r","s"];
+var variables = ["p","t","q","t","r","t","s","t","a","t","b","t"];
+var verdades = [false,false,false,false,false,false];
+var proposiciones = ["p","q","r","s","a","b"];
 var finalStatement = "";
 var tableStatement = "";
 var tipo_tabla = new Array();
@@ -43,6 +43,22 @@ function elkinGay()
     else
     {
         variables[7]="t";
+    }
+    if(document.getElementById("valueOfS").selectedIndex==1)
+    {
+        variables[9]="f"
+    }
+    else
+    {
+        variables[9]="t";
+    }
+    if(document.getElementById("valueOfS").selectedIndex==1)
+    {
+        variables[11]="f"
+    }
+    else
+    {
+        variables[11]="t";
     }
 }
 function switchValue(value){
@@ -162,7 +178,7 @@ function crearTabla(){
         ventana.document.write('</body>');
         array = new Array();
         proposicionesSimples = new Array();
-        verdades = [false,false,false,false];
+        verdades = [false,false,false,false,false,false];
     } else alert("No hay expresión guardada");    
 }
 
@@ -182,6 +198,12 @@ function calcularCantVariables(statement){
             case "s":
                 verdades[3] = true;
                 break;
+            case "a":
+                verdades[4] = true;
+                break;
+            case "b":
+                verdades[5] = true;
+                break;    
         }            
     }
     var cantValues = 0;
@@ -199,6 +221,12 @@ function calcularCantVariables(statement){
                     break;
                 case 3:
                     proposicionesSimples.push("s");
+                    break;
+                case 4:
+                    proposicionesSimples.push("a");
+                    break;
+                case 5:
+                    proposicionesSimples.push("b");
                     break;
             } 
             cantValues++;
@@ -376,6 +404,12 @@ function Calcular(){
                     case "s":
                         expresion+=variables[7];
                         break;
+                    case "a":
+                        expresion+=variables[9];
+                        break;
+                    case "b":
+                        expresion+=variables[11];
+                        break;    
                     default:
                         expresion+=(vars[i]);
                         break; 
@@ -427,6 +461,12 @@ function Calcular(){
                     break;
                 case "s":
                     expresion+=variables[7];
+                    break;
+                case "a":
+                    expresion+=variables[9];
+                    break;
+                case "b":
+                    expresion+=variables[11];
                     break;
                 default:
                     expresion+=(vars[i]);
@@ -781,6 +821,8 @@ function Comprobador(){
              case 'q' : sw = true; break;
              case 'r' : sw = true; break;
              case 's' : sw = true; break;
+             case 'a' : sw = true; break;
+             case 'b' : sw = true; break;
           }  
 	  return sw;
     };
