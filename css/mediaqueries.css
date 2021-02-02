@@ -1,7 +1,7 @@
 
 /*small devices (phones, 576 and up)*/
 @media (min-width: 576px) {
-    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+    .barra entrada form-control col-sm texto col-md contenedor{
         width: 100%;
         margin: 0%;
         padding: 0%;
@@ -10,41 +10,89 @@
     .barra pie{
         width: fit-content;
     }
+
+    .escudo1{
+
+        float:left;
+
+    }
+
+    .escudo2{
+
+        float:right;
+        
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+    .barra entrada form-control col-sm texto col-md contenedor{
         margin: 0%;
         padding: 0%;
     }
 
     .barra pie{
         width: fit-content;
+    }
+
+    .escudo1{
+
+        float:left;
+
+    }
+
+    .escudo2{
+
+        float:right;
+        
     }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+    .barra entrada  escudo2 form-control col-sm texto col-md contenedor{
         margin: 0%;
         padding: 0%;
     }
 
     .barra pie{
         width: fit-content;
+    }
+
+    .escudo1{
+
+        float: left;
+
+    }
+
+    .escudo2{
+
+        float: right;
+
     }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-    .barra entrada escudo1 escudo2 form-control col-sm texto col-md contenedor{
+    .barra entrada form-control col-sm texto col-md contenedor{
         margin: 0%;
         padding: 0%;
     }
 
     .barra pie{
         width: fit-content;
+    }
+
+    .escudo1{
+
+        float:left;
+
+    }
+
+    .escudo2{
+
+        float:right;
+        
     }
 
 }

@@ -26,6 +26,12 @@
     color: black;
 }
 
+.cuadro{
+    padding-top: 100px;
+    width: 350px;
+    border-radius: 10px;
+}
+
 .tencabezado{
     text-align: center;
     font-size: larger;

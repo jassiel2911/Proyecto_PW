@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablas de verdad</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="shortcut icon" href="img/t.png">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <head>
+
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablas de verdad</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="shortcut icon" href="img/t.png">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 </head>
 
-<body>
+<body>  
+
     <nav class="barra">
         <div class="contenedor">
             <ul>
@@ -22,6 +25,7 @@
             </ul>
         </div>
     </nav>
+
 
     <div class="container">
 
@@ -44,69 +48,109 @@
                 <img class="escudo2" src="img/escudofi_negro.jpg" alt="escudofi">
             </div>
         </div>
-
-        <div class="row entrada">
-            <h5>
-            Ingrese fórmula proposicional
-            </h5>
-            <input type="text" class="form-control" id="entradaformula" placeholder="Entrada">
-          </div>
-          
-          <div class="row">
-            <div class="col-md-8">
-                operadores Lógicos
-                <div class="btn-operadores">
-                    <button type="button" onclick="limpiar_entrada()" class="btn btn-secondary">Limpiar</button>
-                    <button type="button" onclick="aniadir_caracter(0)" class="btn btn-secondary">(</button>
-                    <button type="button" onclick="aniadir_caracter(1)" class="btn btn-secondary">)</button>
-                    <button type="button" onclick="aniadir_caracter(2)" class="btn btn-secondary">&#172;</button>
-                    <button type="button" onclick="aniadir_caracter(3)" class="btn btn-secondary">&#8743;</button>
-                    <button type="button" onclick="aniadir_caracter(4)" class="btn btn-secondary">&#8744;</button>
-                    <button type="button" onclick="aniadir_caracter(5)" class="btn btn-secondary">&#8594;</button>
-                    <button type="button" onclick="aniadir_caracter(6)" class="btn btn-secondary">&#8646</button>
-                </div>
-            </div>
-          </div>
-          
-          <div class="b">
-            <button type="button" class="btn btn-primary" onclick="hola()">Tabla de verdad</button>
-          </div>
-          
-          <div class="contenido">
-            <div class="row">
-                <h2>Resultado</h2>
-            </div>
-            <div class="row">
-                <div class="flex flex-centro col-md-6">
-                    <div class="resultado-tabla">
-                        <div class="tabla">
-                            <table>
-                                <tr>
-                                    <td colspan="2">Tabla</td>
-                                </tr>
-                                <tr>
-                                    <td>Contenido de la operación</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-derecha col-md-6">
-                    <div class="resultado-descripcion">
-                        <div class="resultado-tipo caja-resultado">
-                            Nombre de resultado
-                        </div>
-                        <div class="resultado-detallado caja-resultado">
-                            Se va a presentar un breve resumen de los resultados
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
+            
+        <form name="fo">                 
     
-        
-    </div>
+            <div class="cuadro">
+                <font size="4"><strong>Ingrese fórmula proposicional</strong></font>
+            <br><br>
+            <colspan="4"><input type="text" name="valores" style='width:300px; height:30px' id="valores" readonly="readonly">
+    
+            <tr>
+                
+             
+                <div>
+    
+                    Proposiciones atómicas
+                    <br>
+                    <td><input type="button" value="p" style='width:70px; height:50px' onclick="retornar(value,'p')"></td>
+                    <td><input type="button" value="q" style='width:70px; height:50px' onclick="retornar(value,'q')"></td>
+                    <td><input type="button" value="r" style='width:70px; height:50px' onclick="retornar(value,'r')"></td>
+                    <td><input type="button" value="s"  style='width:70px; height:50px'onclick="retornar(value,'s')"></td>
+                    
+                </div>
+                
+                <div>
+    
+                    Operadores Lógicos
+                    <br>
+                    <td><input type="button" value="ʌ" style='width:70px; height:50px' onclick="retornar(value,'&amp;')"></td>
+                    <td><input type="button" value="∨" style='width:70px; height:50px' onclick="retornar(value,'|')"></td>
+                    <td><input type="button" value="→" style='width:70px; height:50px' onclick="retornar(value,'>')"></td>
+                    <td><input type="button" value="¬" style='width:70px; height:50px' onclick="retornar(value,'!')"></td>
+                    
+                </div>
+                           
+                <div>
+                    <td><input type="button" value="↔" style='width:70px; height:50px' onclick="retornar(value,'<')"></td>
+                    <td width="100px"><input type="button" style='width:70px; height:50px' value="(" onclick="retornar(value,'(')"></td>
+                    <td><input type="button" value=")" style='width:70px; height:50px' onclick="retornar(value,')')"></td>
+                </div>
+                <td><input type="button" value="DEL" style='width:80px; height:40px' onclick="eliminar()"></td>
+                <td><input type="button" value="Borrar" style='width:80px; height:40px' onclick="limpiarTextField()"></td>       
+            </tr>
+            </div>
+            
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="5">       
+                    <legend><strong>Valores de Verdad</strong></legend>                      
+                    <label for="valorVerdadP">P</label>                        
+                    <SELECT NAME="value" id="valueOfP" SIZE=1"  color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>
+                    
+                                
+                    <label for="valorVerdadQ">Q</label>
+                    <SELECT NAME="value" id="valueOfQ" SIZE=1" color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>
+                                
+                                
+                    <label for="valorVerdadR">R</label>
+                    <SELECT NAME="value" id="valueOfR" SIZE=1" color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>
+                                
+                                
+                    <label for="valorVerdadS">S</label>
+                    <SELECT NAME="value" id="valueOfS" SIZE=1" color: white;"> 
+                        <OPTION VALUE="1">Verdadero</OPTION>
+                        <OPTION VALUE="2">Falso</OPTION>
+                    </SELECT>                                  
+                </td>
+            </tr>        
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr>   
+            <tr>
+                <th><span><font size="4" color="black">Equivalencia</font></span></th>
+                <br><br>
+                <td colspan="4"><input type="text" readonly="readonly" name="resultado" style='width:300px; height:30px' id="resultado"></td>               
+            </tr>                           
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td>
+            </tr> 
+                    
+            <td colspan="3">
+                
+            </td>          
+            <input type="button" value="Generar Tabla" id="Tabla" onclick="(new Calcular()).calcular();  crearTabla()">
+            <tr>
+                <td colspan="5"><hr size="4px" color="white"></td><br><br><br>
+            </tr>    
+    
+        </form>
 
+    </div>
+    
+    
     <footer class="pie">
         <ul>
             <li class="t1">
@@ -119,7 +163,8 @@
             </li>
         </ul>
     </footer>
+
 </body>
+<script type="text/javascript" src="js/calculadora.js"></script><style type="text/css"></style>
 <script src="js/bootstrap.bundle.js"></script>
-<script src="js/script.js"></script>
 </html>
